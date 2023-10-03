@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { MtiEditor } from '@mtiprich/core';
+import { MtiEditor } from '@nathan3boss/mtiprich';
 
 const meta: Meta<typeof MtiEditor> = {
   title: 'Editor',
