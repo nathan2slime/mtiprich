@@ -1,9 +1,9 @@
 {
   "name": "@nathan3boss/mtiprich",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "description": "Mtiprich",
+  "description": "Rich text editor with tiptap and shadcn/ui",
   "license": "MIT",
   "files": [
     "dist/"
