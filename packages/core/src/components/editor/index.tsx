@@ -33,8 +33,6 @@ import { useToolbar } from './hooks';
 import { EditorProps } from './model';
 import { styles } from './styles';
 
-import './css/styles.css';
-
 export const MtiEditor = ({
   value,
   onChangeValue,
