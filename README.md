@@ -9,7 +9,7 @@
 #### Usage
 
 ```ts
-import { MtiEditor } from '@mtiprich/core';
+import { MtiEditor } from '@nathan3boss/mtiprich';
 
 export const Editor = () => {
   const [value, setValue] = useState('<p>Hi</p>');
