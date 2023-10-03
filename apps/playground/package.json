@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mtiprich/core": "*",
+    "@nathan3boss/mtiprich": "*",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

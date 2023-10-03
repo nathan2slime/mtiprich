@@ -1,15 +1,17 @@
 ### MTipRich
->  😾 <p></p>
- 
 
+> 😾 <p>Rich text editor with tiptap and shadcn/ui</p>
+
+### Install
+
+`npm install @nathan3boss/mtiprich`
 
 #### Activity
 
-![Alt](https://repobeats.axiom.co/api/embed/11a173809c97b0f563b06b7d27eabc820f7ed3be.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/7f8429a6231b2d8bc6b55abcb8245c075510243e.svg 'Repobeats analytics image')
 
 #### Contributors
 
 <a href = "https://github.com/nathan2slime/mtiprich/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=nathan2slime/mtiprich"/>
 </a>
-

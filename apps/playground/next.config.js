@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { transpilePackages: ['@mtiprich/core'] };
+const nextConfig = { transpilePackages: ['@nathan3boss/mtiprich'] };
 
 module.exports = nextConfig;

@@ -11,7 +11,7 @@
     "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.4",
-    "@mtiprich/core": "*",
+    "@nathan3boss/mtiprich": "*",
     "@storybook/addon-docs": "next",
     "@storybook/addon-essentials": "^7.0.0",
     "@storybook/addon-interactions": "^7.0.0",
