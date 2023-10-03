@@ -1,6 +1,6 @@
 {
   "name": "@nathan3boss/mtiprich",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "description": "Mtiprich",
