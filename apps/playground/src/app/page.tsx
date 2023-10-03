@@ -1,17 +1,22 @@
 'use client';
 
-import { MtiEditor } from '@mtiprich/core';
+import { useState } from 'react';
+import { MtiEditor } from '@nathan3boss/mtiprich';
 
-import '@mtiprich/core/dist/index.css';
+import '@nathan3boss/mtiprich/dist/index.css';
 
-const Index = () => (
-  <div className="p-9">
-    <MtiEditor
-      value=""
-      height={430}
-      className="font-normal"
-      onChangeValue={e => console.log(e)}
-    />
-  </div>
-);
+const Index = () => {
+  const [value, setValue] = useState('');
+  return (
+    <div className="p-9">
+      <MtiEditor
+        value={value}
+        height={430}
+        className="font-normal"
+        onChangeValue={e => setValue(e)}
+      />
+    </div>
+  );
+}
+
 export default Index;

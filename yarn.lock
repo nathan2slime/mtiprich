@@ -2550,9 +2550,53 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mtiprich/core@*, @mtiprich/core@workspace:packages/core":
+"@mtiprich/playground@workspace:apps/playground":
   version: 0.0.0-use.local
-  resolution: "@mtiprich/core@workspace:packages/core"
+  resolution: "@mtiprich/playground@workspace:apps/playground"
+  dependencies:
+    "@nathan3boss/mtiprich": "*"
+    "@types/node": latest
+    "@types/react": latest
+    "@types/react-dom": latest
+    autoprefixer: latest
+    next: latest
+    postcss: latest
+    react: latest
+    react-dom: latest
+    tailwindcss: latest
+    typescript: latest
+  languageName: unknown
+  linkType: soft
+
+"@mtiprich/storybook@workspace:apps/storybook":
+  version: 0.0.0-use.local
+  resolution: "@mtiprich/storybook@workspace:apps/storybook"
+  dependencies:
+    "@babel/core": ^7.21.4
+    "@babel/preset-env": ^7.21.4
+    "@babel/preset-react": ^7.18.6
+    "@babel/preset-typescript": ^7.21.4
+    "@nathan3boss/mtiprich": "*"
+    "@storybook/addon-docs": next
+    "@storybook/addon-essentials": ^7.0.0
+    "@storybook/addon-interactions": ^7.0.0
+    "@storybook/addon-links": ^7.0.0
+    "@storybook/blocks": ^7.0.0
+    "@storybook/react": ^7.0.0
+    "@storybook/react-webpack5": ^7.0.0
+    "@storybook/testing-library": ^0.0.14-next.2
+    prop-types: ^15.8.1
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sass: ^1.64.1
+    sass-loader: ^13.2.2
+    storybook: ^7.0.0
+  languageName: unknown
+  linkType: soft
+
+"@nathan3boss/mtiprich@*, @nathan3boss/mtiprich@workspace:packages/core":
+  version: 0.0.0-use.local
+  resolution: "@nathan3boss/mtiprich@workspace:packages/core"
   dependencies:
     "@babel/preset-typescript": ^7.21.4
     "@heroicons/react": ^2.0.18
@@ -2611,50 +2655,6 @@ __metadata:
     "@types/react-dom": ^18.0.7
     react: ^18.2.0
     react-dom: ^18.2.0
-  languageName: unknown
-  linkType: soft
-
-"@mtiprich/playground@workspace:apps/playground":
-  version: 0.0.0-use.local
-  resolution: "@mtiprich/playground@workspace:apps/playground"
-  dependencies:
-    "@mtiprich/core": "*"
-    "@types/node": latest
-    "@types/react": latest
-    "@types/react-dom": latest
-    autoprefixer: latest
-    next: latest
-    postcss: latest
-    react: latest
-    react-dom: latest
-    tailwindcss: latest
-    typescript: latest
-  languageName: unknown
-  linkType: soft
-
-"@mtiprich/storybook@workspace:apps/storybook":
-  version: 0.0.0-use.local
-  resolution: "@mtiprich/storybook@workspace:apps/storybook"
-  dependencies:
-    "@babel/core": ^7.21.4
-    "@babel/preset-env": ^7.21.4
-    "@babel/preset-react": ^7.18.6
-    "@babel/preset-typescript": ^7.21.4
-    "@mtiprich/core": "*"
-    "@storybook/addon-docs": next
-    "@storybook/addon-essentials": ^7.0.0
-    "@storybook/addon-interactions": ^7.0.0
-    "@storybook/addon-links": ^7.0.0
-    "@storybook/blocks": ^7.0.0
-    "@storybook/react": ^7.0.0
-    "@storybook/react-webpack5": ^7.0.0
-    "@storybook/testing-library": ^0.0.14-next.2
-    prop-types: ^15.8.1
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    sass: ^1.64.1
-    sass-loader: ^13.2.2
-    storybook: ^7.0.0
   languageName: unknown
   linkType: soft
 
