@@ -2,11 +2,11 @@
 
 > 😾 <p>Rich text editor with tiptap and shadcn/ui</p>
 
-### Install
+#### Install
 
 `npm install @nathan3boss/mtiprich`
 
-### Usage
+#### Usage
 
 ```ts
 import { MtiEditor } from '@mtiprich/core';
