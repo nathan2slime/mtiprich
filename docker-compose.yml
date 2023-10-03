@@ -1,0 +1,17 @@
+services:
+  app:
+    image: mtiprich
+    container_name: mtiprich
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh -c "yarn install && yarn build && yarn start"
+    env_file:
+      - ./.env
+    expose:
+      - 3000:3000
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app/
+      - /app/node_modules/

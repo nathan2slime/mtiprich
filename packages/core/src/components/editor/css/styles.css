@@ -1,0 +1,44 @@
+blockquote {
+  border-left: 3px solid #0a0a0a;
+  padding-left: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+pre {
+  padding: 8px;
+  border-radius: var(--radius);
+}
+
+ul,
+ol {
+  padding: 0 1rem;
+  list-style: square;
+}
