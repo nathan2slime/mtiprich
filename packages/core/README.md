@@ -11,6 +11,8 @@
 ```ts
 import { MtiEditor } from '@nathan3boss/mtiprich';
 
+import '@nathan3boss/mtiprich/dist/index.css';
+
 export const Editor = () => {
   const [value, setValue] = useState('<p>Hi</p>');
   

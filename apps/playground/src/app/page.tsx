@@ -8,6 +8,7 @@ import '@nathan3boss/mtiprich/dist/src/global/fonts.css';
 
 const Index = () => {
   const [value, setValue] = useState('');
+  
   return (
     <div className="p-9">
       <MtiEditor
