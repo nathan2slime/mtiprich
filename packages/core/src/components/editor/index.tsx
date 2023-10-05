@@ -19,11 +19,6 @@ import Youtube from '@tiptap/extension-youtube';
 import Placeholder from '@tiptap/extension-placeholder';
 import TaskList from '@tiptap/extension-task-list';
 import TaskItem from '@tiptap/extension-task-item';
-import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight';
-import css from 'highlight.js/lib/languages/css';
-import js from 'highlight.js/lib/languages/javascript';
-import ts from 'highlight.js/lib/languages/typescript';
-import html from 'highlight.js/lib/languages/xml';
 
 import { Toggle } from '@/components/ui/toggle';
 import { Card } from '@/components/ui/card';
@@ -40,14 +35,6 @@ export const MtiEditor = ({
   height,
   ...props
 }: EditorProps) => {
-  const lowlight = createLowlight();
-  const { register } = lowlight;
-
-  register('html', html);
-  register('css', css);
-  register('js', js);
-  register('ts', ts);
-
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -61,13 +48,6 @@ export const MtiEditor = ({
       Link,
       Strike,
       Underline,
-      CodeBlockLowlight.configure({
-        lowlight,
-        HTMLAttributes: {
-          class: 'hljs',
-        },
-        defaultLanguage: 'typescript',
-      }),
       Heading,
       Color,
       Highlight,
@@ -113,7 +93,7 @@ export const MtiEditor = ({
             return component ? component(children) : children;
           })}
       </Card>
-
+      
       <ScrollArea style={contentStyles}>
         <EditorContent
           {...props}

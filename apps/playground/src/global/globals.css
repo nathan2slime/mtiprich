@@ -8,5 +8,6 @@
 
 pre,
 code {
-  font-family: 'JetBrains Mono', monospace !important;
+  font-family: 'JetBrains Mono', monospace;
+  padding: 4px;
 }
