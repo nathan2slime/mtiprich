@@ -1,9 +1,13 @@
+'use client';
+
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+
 import { AppChildren } from '@/types';
 
 import '@/global/globals.css';
 
 const AppLayout = ({ children }: AppChildren) => (
-  <html lang="en">
+  <html lang="en" suppressHydrationWarning>
     <head>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
@@ -20,7 +24,16 @@ const AppLayout = ({ children }: AppChildren) => (
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css"
       />
     </head>
-    <body>{children}</body>
+    <body>
+      <NextThemesProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        {children}
+      </NextThemesProvider>
+    </body>
   </html>
 );
 
