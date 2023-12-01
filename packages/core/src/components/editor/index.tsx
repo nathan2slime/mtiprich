@@ -1,7 +1,6 @@
+import { useEffect } from 'react';
 import { useEditor, EditorContent, Editor } from '@tiptap/react';
 import { Image } from '@tiptap/extension-image';
-import { useEffect } from 'react';
-import { createLowlight } from 'lowlight';
 import StarterKit from '@tiptap/starter-kit';
 import Code from '@tiptap/extension-code';
 import TextAlign from '@tiptap/extension-text-align';
@@ -63,6 +62,16 @@ export const MtiEditor = ({
   }) as Editor;
 
   useEffect(() => {
+    if(editor) {
+      const rich = editor.getHTML();
+
+       if(rich == value) return
+
+       editor.commands.setContent(value, false, { })
+    }
+  }, [value]);
+
+  useEffect(() => {
     editor && editor.on('update', () => onChangeValue(editor.getHTML()));
   }, [editor]);
 
@@ -93,7 +102,7 @@ export const MtiEditor = ({
             return component ? component(children) : children;
           })}
       </Card>
-      
+
       <ScrollArea style={contentStyles}>
         <EditorContent
           {...props}

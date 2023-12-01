@@ -51,7 +51,6 @@
     "framer-motion": "^10.12.16",
     "highlight.js": "^11.8.0",
     "jsdom": "^22.1.0",
-    "lowlight": "^3.0.0",
     "lucide-react": "^0.279.0",
     "postcss": "^8.4.24",
     "react": "^18.2.0",

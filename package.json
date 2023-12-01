@@ -13,6 +13,8 @@
     "test": "turbo run test",
     "start": "turbo run start",
     "format": "prettier --write .",
+    "dev:playground": "turbo run dev --filter=@mtiprich/playground",
+    "dev:mtiprich": "turbo run dev --filter=mtiprich",
     "commit": "git-cz"
   },
   "devDependencies": {
