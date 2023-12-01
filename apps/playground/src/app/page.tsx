@@ -1,8 +1,7 @@
 'use client';
 
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import { MtiEditor } from '@nathan3boss/mtiprich';
-
 
 import '@nathan3boss/mtiprich/dist/index.css';
 import '@nathan3boss/mtiprich/dist/src/global/fonts.css';
@@ -10,8 +9,7 @@ import '@nathan3boss/mtiprich/dist/src/global/fonts.css';
 const Index = () => {
   const [value, setValue] = useState('');
 
-  useEffect(() => {
-  }, [])
+  useEffect(() => {}, []);
 
   return (
     <div className="p-9">

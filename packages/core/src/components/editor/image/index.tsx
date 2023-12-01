@@ -39,7 +39,7 @@ export const MiImage = ({
   const onSubmit = () => {
     onChangeValue(form);
 
-    reset()
+    reset();
     onChangeOpen(false);
   };
 

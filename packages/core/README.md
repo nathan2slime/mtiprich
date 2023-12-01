@@ -15,14 +15,14 @@ import '@nathan3boss/mtiprich/dist/index.css';
 
 export const Editor = () => {
   const [value, setValue] = useState('<p>Hi</p>');
-  
-    
+
+
   return (
     <MtiEditor
       value={value}
       height={430}
       onChangeValue={e => setValue(e)}
-    /> 
+    />
   );
 }
 ```

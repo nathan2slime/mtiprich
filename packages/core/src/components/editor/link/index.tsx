@@ -16,7 +16,7 @@ import { styles } from './styles';
 
 const schema = yup.object().shape({
   href: yup.string().url().required('Field is required'),
-  target: yup.string()
+  target: yup.string(),
 });
 
 export const MiLink = ({

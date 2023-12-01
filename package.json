@@ -38,7 +38,6 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@3.5.0",
   "dependencies": {
     "highlight.js": "^11.8.0",
     "jest": "^29.5.0",

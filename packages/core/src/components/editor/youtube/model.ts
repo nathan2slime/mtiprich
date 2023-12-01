@@ -2,10 +2,10 @@ import { AppChildren } from '@/lib/utils';
 
 export type MiYoutubeSetting = {
   src: string;
-  width?: number,
-  height?: number,
+  width?: number;
+  height?: number;
   controls?: boolean;
-  allowFullscreen?: boolean
+  allowFullscreen?: boolean;
 };
 
 export type MiYoutubeProps = AppChildren & {

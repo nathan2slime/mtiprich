@@ -62,12 +62,12 @@ export const MtiEditor = ({
   }) as Editor;
 
   useEffect(() => {
-    if(editor) {
+    if (editor) {
       const rich = editor.getHTML();
 
-       if(rich == value) return
+      if (rich == value) return;
 
-       editor.commands.setContent(value, false, { })
+      editor.commands.setContent(value, false, {});
     }
   }, [value]);
 

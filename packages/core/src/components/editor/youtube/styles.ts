@@ -9,7 +9,7 @@ export const styles = tv({
     fieldset: 'grid h-9 grid-cols-3 items-center gap-4',
     footer: 'grid grid-cols-3 items-end gap-4',
     description: 'text-sm text-muted-foreground',
-    field: "col-span-2",
+    field: 'col-span-2',
     title: 'font-medium leading-none',
   },
 });
