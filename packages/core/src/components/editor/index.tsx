@@ -15,6 +15,7 @@ import Underline from '@tiptap/extension-underline';
 import Strike from '@tiptap/extension-strike';
 import Paragraph from '@tiptap/extension-paragraph';
 import Youtube from '@tiptap/extension-youtube';
+import HardBreak from '@tiptap/extension-hard-break';
 import Placeholder from '@tiptap/extension-placeholder';
 import TaskList from '@tiptap/extension-task-list';
 import TaskItem from '@tiptap/extension-task-item';
@@ -46,6 +47,11 @@ export const MtiEditor = ({
       Blockquote,
       Link,
       Strike,
+      HardBreak.configure({
+        HTMLAttributes: {
+          class: 'my-custom-class',
+        },
+      }),
       Underline,
       Heading,
       Color,

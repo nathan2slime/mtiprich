@@ -2559,7 +2559,6 @@ __metadata:
     "@types/react": "npm:latest"
     "@types/react-dom": "npm:latest"
     autoprefixer: "npm:latest"
-    lowlight: "npm:^3.1.0"
     next: "npm:latest"
     next-themes: "npm:^0.2.1"
     postcss: "npm:latest"
@@ -2616,6 +2615,7 @@ __metadata:
     "@testing-library/react": "npm:^14.0.0"
     "@tiptap/extension-code-block-lowlight": "npm:^2.1.11"
     "@tiptap/extension-color": "npm:^2.1.11"
+    "@tiptap/extension-hard-break": "npm:^2.1.13"
     "@tiptap/extension-highlight": "npm:^2.1.11"
     "@tiptap/extension-image": "npm:^2.1.11"
     "@tiptap/extension-link": "npm:^2.1.11"
@@ -5443,6 +5443,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tiptap/extension-hard-break@npm:^2.1.13":
+  version: 2.1.13
+  resolution: "@tiptap/extension-hard-break@npm:2.1.13"
+  peerDependencies:
+    "@tiptap/core": ^2.0.0
+  checksum: a938e9db0f66783bcbcba231b87ef4531ae06d844c8f0ff16cca097e4b7b893bbe15af20f95d26a66cbbd050252c41ecb72efddbd193fde5cbdcd68cdb292881
+  languageName: node
+  linkType: hard
+
 "@tiptap/extension-heading@npm:^2.1.11":
   version: 2.1.11
   resolution: "@tiptap/extension-heading@npm:2.1.11"
@@ -5935,15 +5944,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/hast@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "@types/hast@npm:3.0.1"
-  dependencies:
-    "@types/unist": "npm:*"
-  checksum: 44f9d701be1b2294911feb79580d48f7b5f6365fd173273aa9cbfc29054363eb2724edffa50ee515b4cb9d33d94f70fa0b97e7103609cb6bc3c1d9b41aa2f953
-  languageName: node
-  linkType: hard
-
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.1.0
   resolution: "@types/html-minifier-terser@npm:6.1.0"
@@ -6203,13 +6203,6 @@ __metadata:
   version: 2.1.0
   resolution: "@types/throttle-debounce@npm:2.1.0"
   checksum: 678dbd8a3c158e49f057a2e8898ba3c29e06cda95f6ca393a7a7785298d48758dc62c5c49090ec0bdea572a6d51a60a9ba5c95e17de2ca24d57a28de63ca25c7
-  languageName: node
-  linkType: hard
-
-"@types/unist@npm:*":
-  version: 3.0.0
-  resolution: "@types/unist@npm:3.0.0"
-  checksum: e9d21a8fb5e332be0acef29192d82632875b2ef3e700f1bc64fdfc1520189542de85c3d4f3bcfbc2f4afdb210f4c23f68061f3fbf10744e920d4f18430d19f49
   languageName: node
   linkType: hard
 
@@ -8432,7 +8425,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dequal@npm:^2.0.0, dequal@npm:^2.0.2":
+"dequal@npm:^2.0.2":
   version: 2.0.3
   resolution: "dequal@npm:2.0.3"
   checksum: 6ff05a7561f33603df87c45e389c9ac0a95e3c056be3da1a0c4702149e3a7f6fe5ffbb294478687ba51a9e95f3a60e8b6b9005993acd79c292c7d15f71964b6b
@@ -8493,15 +8486,6 @@ __metadata:
     detect: bin/detect-port.js
     detect-port: bin/detect-port.js
   checksum: b48da9340481742547263d5d985e65d078592557863402ecf538511735e83575867e94f91fe74405ea19b61351feb99efccae7e55de9a151d5654e3417cea05b
-  languageName: node
-  linkType: hard
-
-"devlop@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "devlop@npm:1.1.0"
-  dependencies:
-    dequal: "npm:^2.0.0"
-  checksum: 3cc5f903d02d279d6dc4aa71ab6ed9898b9f4d1f861cc5421ce7357893c21b9520de78afb203c92bd650a6977ad0ca98195453a0707a39958cf5fea3b0a8ddd8
   languageName: node
   linkType: hard
 
@@ -10125,13 +10109,6 @@ __metadata:
   version: 11.8.0
   resolution: "highlight.js@npm:11.8.0"
   checksum: a1952caae8ae07b9e60faad87307881eaf38d2356b0b1295b0692b16fb57811da6bb4d143a4940609f58c6a8facf73ff493bab4d946fb24731af9355d51d0a69
-  languageName: node
-  linkType: hard
-
-"highlight.js@npm:~11.9.0":
-  version: 11.9.0
-  resolution: "highlight.js@npm:11.9.0"
-  checksum: 44b3e42bc096a2e5207e514826a10ff7671de315a7216ebaeba76593d4f16dfe3f7078390cb5c2b08eae657694fef4fb65d775376db48480c829c83fbc4f157a
   languageName: node
   linkType: hard
 
@@ -11911,17 +11888,6 @@ __metadata:
   dependencies:
     tslib: "npm:^2.0.3"
   checksum: 83a0a5f159ad7614bee8bf976b96275f3954335a84fad2696927f609ddae902802c4f3312d86668722e668bef41400254807e1d3a7f2e8c3eede79691aa1f010
-  languageName: node
-  linkType: hard
-
-"lowlight@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "lowlight@npm:3.1.0"
-  dependencies:
-    "@types/hast": "npm:^3.0.0"
-    devlop: "npm:^1.0.0"
-    highlight.js: "npm:~11.9.0"
-  checksum: 0d6e5b70ea84828becd5321f2171416fcdc11921bd678e5eb1a05af0fe1c1588500cb24e94c0d6e0f5c67a0093d41d959bfe9f332e0db17b644a452b2983e0b6
   languageName: node
   linkType: hard
 
