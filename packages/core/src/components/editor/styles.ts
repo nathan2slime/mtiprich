@@ -1,13 +1,32 @@
-import { tv } from 'tailwind-variants';
+import { EditorContent } from '@tiptap/react';
 
-export const styles = tv({
-  slots: {
-    wrapper: 'shadow-none w-full overflow-hidden',
-    title:
-      'p-4 shadow-none flex-wrap overflow-x-auto rounded-none border-none flex justify-start items-center gap-2',
-    editor: 'outline-none h-full border-t border-[hsl(var(--border))] p-4 ',
-    button: 'shadow-none',
-    icon: 'h-4 w-4',
-    field: 'grid grid-cols-3 items-center gap-4',
-  },
+import { styled, theme } from '@/global/themes';
+
+export const Wrapper = styled('div', {
+  width: '100%',
+  overflow: 'hidden',
+  borderWidth: theme.editor.borderWidth,
+  borderRadius: theme.radii.base,
+  borderColor: theme.editor.borderColor,
+  background: theme.editor.background,
+  borderStyle: theme.editor.borderStyle,
+});
+
+export const CustomEditor = styled(EditorContent, {
+  height: 'inherit',
+  padding: '13px',
+});
+
+export const Head = styled('div', {
+  padding: '13px',
+  overflowX: 'auto',
+  flexWrap: 'wrap',
+  borderBottomWidth: theme.toolbar.borderWidth,
+  borderColor: theme.toolbar.borderColor,
+  borderStyle: theme.toolbar.borderStyle,
+  background: theme.toolbar.background,
+  display: 'flex',
+  justifyContent: 'start',
+  alignItems: 'center',
+  gap: '6px',
 });

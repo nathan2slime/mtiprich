@@ -4,6 +4,7 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",
+    "typeRoots": ["./src/types"],
     "paths": {
       "@/*": ["./src/*"]
     }

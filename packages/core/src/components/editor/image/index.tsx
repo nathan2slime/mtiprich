@@ -2,17 +2,13 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover';
+import { MiLabel } from '@/components/label';
+import { MiInput } from '@/components/input';
+import { MiButton } from '@/components/button';
 
 import { MiImageProps } from './model';
-import { styles } from './styles';
+import { Wrapper } from './styles';
 
 const schema = yup.object().shape({
   src: yup.string().url().required('Field is required'),
@@ -34,8 +30,6 @@ export const MiImage = ({
 
   const form = watch();
 
-  const style = styles();
-
   const onSubmit = () => {
     onChangeValue(form);
 
@@ -46,52 +40,50 @@ export const MiImage = ({
   return (
     <Popover>
       <PopoverTrigger>{children}</PopoverTrigger>
-      <PopoverContent className={style.wrapper()}>
-        <div className={style.form()}>
-          <div className={style.header()}>
-            <h4 className={style.title()}>Link image</h4>
-            <p className={style.description()}>
-              Set the settings for the image.
-            </p>
+      <PopoverContent>
+        <Wrapper>
+          <div className="header">
+            <h4 className="title">Link image</h4>
+            <p className="description">Set the settings for the image.</p>
           </div>
-          <div className={style.group()}>
-            <div className={style.fieldset()}>
-              <Label>Source</Label>
-              <Input
+          <div className="group">
+            <div className="fieldset">
+              <MiLabel>Source</MiLabel>
+              <MiInput
                 value={form.src}
                 onChange={e =>
                   setValue('src', e.target.value, { shouldValidate: true })
                 }
-                className={style.field()}
+                className="field"
               />
             </div>
-            <div className={style.fieldset()}>
-              <Label>Alt</Label>
-              <Input
+            <div className="fieldset">
+              <MiLabel>Alt</MiLabel>
+              <MiInput
                 value={form.alt}
                 onChange={e =>
                   setValue('alt', e.target.value, { shouldValidate: true })
                 }
-                className={style.field()}
+                className="field"
               />
             </div>
-            <div className={style.fieldset()}>
-              <Label>Title</Label>
-              <Input
+            <div className="fieldset">
+              <MiLabel>Title</MiLabel>
+              <MiInput
                 value={form.title}
                 onChange={e =>
                   setValue('title', e.target.value, { shouldValidate: true })
                 }
-                className={style.field()}
+                className="field"
               />
             </div>
-            <div className={style.footer()}>
-              <Button onClick={() => onSubmit()} disabled={!isValid}>
+            <div className="footer">
+              <MiButton onClick={() => onSubmit()} disabled={!isValid}>
                 Add
-              </Button>
+              </MiButton>
             </div>
           </div>
-        </div>
+        </Wrapper>
       </PopoverContent>
     </Popover>
   );

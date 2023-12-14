@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useEditor, EditorContent, Editor } from '@tiptap/react';
+import { useEditor, Editor } from '@tiptap/react';
 import { Image } from '@tiptap/extension-image';
 import StarterKit from '@tiptap/starter-kit';
 import Code from '@tiptap/extension-code';
@@ -20,13 +20,12 @@ import Placeholder from '@tiptap/extension-placeholder';
 import TaskList from '@tiptap/extension-task-list';
 import TaskItem from '@tiptap/extension-task-item';
 
-import { Toggle } from '@/components/ui/toggle';
-import { Card } from '@/components/ui/card';
-import { ScrollArea } from '@/components/ui/scroll-area';
+import { MiToggle } from '../toggle';
 
-import { useToolbar } from './hooks';
+import { useToolbar } from './hooks'
+;
 import { EditorProps } from './model';
-import { styles } from './styles';
+import { CustomEditor, Head, Wrapper } from './styles';
 
 export const MtiEditor = ({
   value,
@@ -81,8 +80,6 @@ export const MtiEditor = ({
     editor && editor.on('update', () => onChangeValue(editor.getHTML()));
   }, [editor]);
 
-  const style = styles();
-
   const { toolbar } = useToolbar(editor);
 
   const contentStyles = {
@@ -90,32 +87,29 @@ export const MtiEditor = ({
   };
 
   return (
-    <Card className={style.wrapper()}>
-      <Card className={style.title()}>
+    <Wrapper>
+      <Head>
         {editor &&
           toolbar.map(({ name, action, icon, args = {}, component }) => {
             const children = (
-              <Toggle
+              <MiToggle
                 variant="outline"
-                className={style.button()}
                 pressed={editor.isActive(name, args)}
                 onPressedChange={() => action()}
               >
                 {icon}
-              </Toggle>
+              </MiToggle>
             );
 
             return component ? component(children) : children;
           })}
-      </Card>
+      </Head>
 
-      <ScrollArea style={contentStyles}>
-        <EditorContent
-          {...props}
-          className={style.editor({ className })}
-          editor={editor}
-        />
-      </ScrollArea>
-    </Card>
+      <CustomEditor
+        {...props}
+        style={contentStyles}
+        editor={editor}
+      />
+    </Wrapper>
   );
 };

@@ -1,6 +1,6 @@
 ### MTipRich
 
-> 😾 <p>Rich text editor with tiptap and shadcn/ui</p>
+> 😾 <p>Rich text editor with TipTap</p>
 
 #### Install
 

@@ -1,15 +1,40 @@
-import { tv } from 'tailwind-variants';
+import { styled, theme } from '@/global/themes';
 
-export const styles = tv({
-  slots: {
-    wrapper: 'w-80',
-    form: 'grid gap-4',
-    group: 'grid gap-2',
-    header: 'space-y-2',
-    fieldset: 'grid grid-cols-3 items-center gap-4',
-    footer: 'grid grid-cols-3 items-end gap-4',
-    description: 'text-sm text-muted-foreground',
-    field: 'col-span-2 h-8',
-    title: 'font-medium leading-none',
+export const Wrapper = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '300px',
+  maxWidth: '300px',
+  gap: '15px',
+  '& .header': {
+    width: '100%',
+  },
+  '& .group': {
+    display: 'grid',
+    gap: '8px',
+  },
+  '& .title': {
+    fontSize: theme.fontSizes.md,
+    color: theme.colors.text200,
+  },
+  '& .description': {
+    fontSize: theme.fontSizes.sm,
+    color: theme.colors.text200,
+  },
+  '& .fieldset': {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    gap: '5px'
+  },
+  '& .field': {
+    width: '80%',
+  },
+  '& .footer': {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr',
+    gap: '4px',
+    marginTop: '14px',
+    alignItems: 'center',
   },
 });

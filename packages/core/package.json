@@ -1,9 +1,9 @@
 {
   "name": "@nathan3boss/mtiprich",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "description": "Rich text editor with tiptap and shadcn/ui",
+  "description": "Rich text editor with TipTap",
   "license": "MIT",
   "files": [
     "dist/"
@@ -25,6 +25,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-toggle": "^1.0.3",
+    "@stitches/react": "^1.2.8",
     "@tailwindcss/typography": "^0.5.9",
     "@testing-library/react": "^14.0.0",
     "@tiptap/extension-code-block-lowlight": "^2.1.11",
@@ -56,10 +57,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.2",
-    "tailwind-merge": "^1.14.0",
     "tailwind-variants": "^0.1.14",
-    "tailwindcss": "^3.3.2",
-    "tailwindcss-animate": "^1.0.7",
     "tsup": "^6.7.0",
     "typescript": "^4.5.2",
     "yup": "^1.3.2"
