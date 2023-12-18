@@ -13,6 +13,7 @@ import Highlight from '@tiptap/extension-highlight';
 import Link from '@tiptap/extension-link';
 import Underline from '@tiptap/extension-underline';
 import Strike from '@tiptap/extension-strike';
+import Focus from '@tiptap/extension-focus';
 import Paragraph from '@tiptap/extension-paragraph';
 import Youtube from '@tiptap/extension-youtube';
 import HardBreak from '@tiptap/extension-hard-break';
@@ -22,8 +23,8 @@ import TaskItem from '@tiptap/extension-task-item';
 
 import { MiToggle } from '../toggle';
 
-import { useToolbar } from './hooks'
-;
+import { useToolbar } from './hooks';
+
 import { EditorProps } from './model';
 import { CustomEditor, Head, Wrapper } from './styles';
 
@@ -37,13 +38,18 @@ export const MtiEditor = ({
   const editor = useEditor({
     extensions: [
       StarterKit,
-      Image,
+      Image.configure({
+        inline: false,
+      }),
       Paragraph,
       Youtube,
       Code,
       CodeBlock,
       BulletList,
       Blockquote,
+      Focus.configure({
+        className: 'focus',
+      }),
       Link,
       Strike,
       HardBreak.configure({
@@ -57,7 +63,7 @@ export const MtiEditor = ({
       Highlight,
       Link,
       TextAlign.configure({
-        types: ['heading', 'paragraph'],
+        types: ['heading', 'paragraph', 'image'],
       }),
       Placeholder,
       TaskList,
@@ -77,7 +83,9 @@ export const MtiEditor = ({
   }, [value]);
 
   useEffect(() => {
-    editor && editor.on('update', () => onChangeValue(editor.getHTML()));
+    if (editor) {
+      editor.on('update', () => onChangeValue(editor.getHTML()));
+    }
   }, [editor]);
 
   const { toolbar } = useToolbar(editor);
@@ -105,11 +113,7 @@ export const MtiEditor = ({
           })}
       </Head>
 
-      <CustomEditor
-        {...props}
-        style={contentStyles}
-        editor={editor}
-      />
+      <CustomEditor {...props} style={contentStyles} editor={editor} />
     </Wrapper>
   );
 };

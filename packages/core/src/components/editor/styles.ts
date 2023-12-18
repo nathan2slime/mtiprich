@@ -15,6 +15,8 @@ export const Wrapper = styled('div', {
 export const CustomEditor = styled(EditorContent, {
   height: 'inherit',
   padding: '13px',
+  color: theme.colors.text200,
+  overflowY: 'auto'
 });
 
 export const Head = styled('div', {

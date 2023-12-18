@@ -12,7 +12,7 @@ const Index = () => {
   useEffect(() => {}, []);
 
   return (
-    <div className="p-9">
+    <div className="p-9 text-slate-900 outline-none">
       <MtiEditor value={value} height={430} onChangeValue={e => setValue(e)} />
     </div>
   );

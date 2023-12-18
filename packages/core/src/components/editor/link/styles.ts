@@ -14,7 +14,7 @@ export const Wrapper = styled('div', {
     gap: '8px',
   },
   '& .title': {
-    fontSize: theme.fontSizes.md,
+    fontSize: theme.fontSizes.base,
     color: theme.colors.text200,
   },
   '& .description': {

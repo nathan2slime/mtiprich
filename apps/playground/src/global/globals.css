@@ -4,10 +4,16 @@
 
 * {
   font-family: 'Baloo 2', cursive;
+  outline: none;
 }
 
 pre,
 code {
   font-family: 'JetBrains Mono', monospace;
   padding: 4px;
+}
+
+
+img {
+  width: 340px;
 }
